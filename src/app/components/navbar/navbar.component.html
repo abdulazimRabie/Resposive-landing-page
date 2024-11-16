@@ -1,0 +1,34 @@
+<div class="navbar gap-y-1 md:gap-0 flex-col items-start md:flex-row md:justify-between md:items-center bg-offwhite_color">
+    <div class="navbar-start justify-between w-full md:w-1/2 items-center"> 
+        <button (click)="toggleShowMenue()" class="btn flex items-center justify-center px-1 py-2 btn-sm btn-ghost md:hidden overflow-hidden h-fit ">
+            <!-- hamburger icon -->
+            <svg
+                class="sfill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512">
+                <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+            </svg>
+        </button>
+
+        <app-logo></app-logo>
+    </div>
+
+    <div class="navbar-center lg:flex hidden md:block w-full border-2 rounded-md md:border-none md:w-fit" [ngClass]="{'hidden': showMenue}">
+      <ul class="menu md:menu-horizontal px-1 w-full">
+        <li>
+            <a class="text-lg border-2 border-transparent hover:border-secondary_color hover:bg-transparent font-bold" [routerLink]="['/']" fragment="_home">Home</a>
+        </li>
+        <li>
+            <a class="text-lg border-2 border-transparent hover:border-secondary_color hover:bg-transparent font-bold" [routerLink]="['/']" fragment="_about">About</a>
+        </li>
+        <li>
+            <a class="text-lg border-2 border-transparent hover:border-secondary_color hover:bg-transparent font-bold" [routerLink]="['/']" fragment="_features">Feature</a>
+        </li>
+        <li>
+            <a class="text-lg border-2 border-transparent hover:border-secondary_color hover:bg-transparent font-bold" [routerLink]="['/']" fragment="_cta">CTA</a>
+        </li>
+      </ul>
+    </div>
+</div>
